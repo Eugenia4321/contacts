@@ -27,3 +27,36 @@ def read_cont2():
         print(f'Всего в файле {count + 1} строк.')
  
 #Оба способа выводят на печать не красиво в случае если имя или фамилия длинные.
+
+
+#  Еще две функции для чтения, чтобы посмотреть, какая лучше подойдет для проекта.
+
+def Read_csvfile(datacsv): 
+    """чтение cvs файла и вывод на экран"""
+    import csv
+    with open(datacsv, encoding='utf-8') as data:
+        file_reader = csv.reader(data, delimiter = "|")
+        count = 0
+        for row in file_reader:
+            if count == 0:
+                    # Вывод строки, содержащей заголовки для столбцов
+                print(f'Файл содержит столбцы: {", ".join(row)}')
+            else:
+                    # Вывод строк
+                print(f' {row[0]} {row[1]} {row[2]}.')
+            count += 1
+
+print(Read_csvfile("data.csv"))
+
+def Read_csvfile_for_list(datacsv) ->list: 
+    """чтение cvs файла и запись в список"""
+    import csv
+    data_list = []
+    with open(datacsv, encoding='utf-8') as data:
+        file_reader = csv.reader(data, delimiter = "|")
+
+        for row in file_reader:
+                   data_list.append(row)
+    return data_list
+
+print(Read_csvfile_for_list("data.csv"))
