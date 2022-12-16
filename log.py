@@ -16,5 +16,4 @@ def create_log(data_contact: list,name_log_file: str="log.txt", log_massage:str 
         data_file.write(log_item)
     data_file.close()    
 
-data_contact = ['имя','фамилия','номер телефона','комментарий']
-create_log(data_contact)
+
