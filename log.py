@@ -15,5 +15,3 @@ def create_log(data_contact: list,name_log_file: str="log.txt", log_massage:str 
     with open(name_log_file, "a", encoding='UTF-8') as data_file:        
         data_file.write(log_item)
     data_file.close()    
-
-
