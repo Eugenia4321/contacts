@@ -46,7 +46,6 @@ def Read_csvfile(datacsv):
                 print(f' {row[0]} {row[1]} {row[2]}.')
             count += 1
 
-print(Read_csvfile("data.csv"))
 
 def Read_csvfile_for_list(datacsv) ->list: 
     """чтение cvs файла и запись в список"""
@@ -59,4 +58,13 @@ def Read_csvfile_for_list(datacsv) ->list:
                    data_list.append(row)
     return data_list
 
-print(Read_csvfile_for_list("data.csv"))
+
+еще одна функция для чтения и записи в список для формата txt: 
+    
+def get_lines_list_of_contacts(name_data_list : str ="data.csv") -> list:
+    """чтение файла и запись в список"""
+    data_list=[]
+    with open(name_data_list, "r", encoding='UTF-8') as data_file:
+        for line in data_file.readlines():
+            data_list.append(line)
+    return data_list
