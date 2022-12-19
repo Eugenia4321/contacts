@@ -17,6 +17,16 @@ def start():
             result = fd.search_contact_by_surname()
             ie.top_line()
             print(result)
+        elif n == 3:
+            result = fd.search_contact_by_name()
+            ie.result_search()
+            ie.top_line()
+            print(result)
+        elif n == 4:
+            result = fd.search_contact_by_phone_num()
+            ie.result_search()
+            ie.top_line()
+            print(result)           
         elif n == 5:
             ie.result_read()
             rd.Read_csvfile('data.csv')
