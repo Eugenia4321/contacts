@@ -1,9 +1,6 @@
 from colorama import init
 init()
 from colorama import Fore, Back, Style
-from check import Check_telephon_number
-from check import Check_name
-from check import Check_comment
 
 def hello():
     '''Функция приветствия'''
