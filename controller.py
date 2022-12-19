@@ -78,15 +78,21 @@ while True:
             else:
                 ie.error_menu_item()
     elif n == 7:
-        while True:
+        delete = True
+        while delete == True:
             ie.menu_item_options()
             option = ie.menu_item()
             if option == 1:
                 surname = ch.Check_surname()
+                de.delete_contact(surname,name_data_list="data.csv")
             elif option == 2:
                 name = ch.Check_name()
+                de.delete_contact(name,name_data_list="data.csv")
             elif option == 3:
                 tel_num = ch.Check_telephon_number()
+                de.delete_contact(tel_num,name_data_list="data.csv")
+            elif option == 4: 
+                delete= False
             else:
                 ie.error_menu_item()
     elif n == 8:

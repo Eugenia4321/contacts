@@ -120,8 +120,17 @@ def menu_item_options():
     print(Fore.BLUE + Style.NORMAL + '1. Найти номер по фамилии' + Style.RESET_ALL)
     print(Fore.BLUE + Style.NORMAL + '2. Найти номер по имени' + Style.RESET_ALL)
     print(Fore.BLUE + Style.NORMAL + '3. Поиск по номеру телефона' + Style.RESET_ALL)
+    print(Fore.BLUE + Style.NORMAL + '4. Вернуться' + Style.RESET_ALL)
 
 def bye():
     '''Выводит сообщение о завершении работы телефонного справочника.
     '''
     print(Fore.CYAN + Style.NORMAL + 'Спасибо за работу!' + Style.RESET_ALL)
+    
+def delete_success():
+    '''Печатает об успешном удалении контакта'''
+    print(Fore.GREEN + Style.NORMAL + 'Контакт успешно удален.' + Style.RESET_ALL)    
+    
+def error_delete():
+    '''Печатает ошибку, если контакт не найден'''
+    print(Fore.RED + Style.NORMAL + 'Контакт не найден' + Style.RESET_ALL) 
