@@ -120,6 +120,7 @@ def menu_item_options():
     print(Fore.BLUE + Style.NORMAL + '1. Найти номер по фамилии' + Style.RESET_ALL)
     print(Fore.BLUE + Style.NORMAL + '2. Найти номер по имени' + Style.RESET_ALL)
     print(Fore.BLUE + Style.NORMAL + '3. Поиск по номеру телефона' + Style.RESET_ALL)
+    print(Fore.BLUE + Style.NORMAL + '4. Вернуться' + Style.RESET_ALL)
 
 def bye():
     '''Выводит сообщение о завершении работы телефонного справочника.
