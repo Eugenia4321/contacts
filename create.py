@@ -1,7 +1,3 @@
-# from interface import get_new_surname
-# from interface import get_new_name
-# from interface import get_new_tel_num
-# from interface import get_new_comment
 from interface import get_surname
 from interface import get_name
 from interface import get_tel_num

@@ -37,7 +37,6 @@ def get_name():
         name = input(Fore.CYAN + Style.NORMAL + 'Введите имя: ' + Style.RESET_ALL).title()
     return name
     
-
 def get_tel_num():
     '''Запрашивает у пользовтеля телефон'''
     number=''
@@ -52,22 +51,42 @@ def get_comment():
     while not check.Check_comment(comment):
         comment = input(Fore.CYAN + Style.NORMAL + 'Введите комментарий: ' + Style.RESET_ALL).title()
     return comment
-
+    
+def get_new_surname():
+    '''Запрашивает у пользовтеля новую фамилию'''
+    while True:
+        new_surname = input(Fore.CYAN + Style.NORMAL + 'Введите новую фамилию: ' + Style.RESET_ALL).title()
+        if check.Check_name(new_surname):
+            return new_surname
+        else:
+            error_surname()
 
 def get_new_name():
     '''Запрашивает у пользовтеля новое имя'''
-    new_name = input(Fore.CYAN + Style.NORMAL + 'Введите новое имя: ' + Style.RESET_ALL).title()
-    return new_name
+    while True:
+        new_name = input(Fore.CYAN + Style.NORMAL + 'Введите новое имя: ' + Style.RESET_ALL).title()
+        if check.Check_name(new_name):
+            return new_name
+        else:
+            error_name()
 
 def get_new_tel_num():
     '''Запрашивает у пользовтеля новый телефон'''
-    new_number = input(Fore.CYAN + Style.NORMAL + 'Введите новый номер телефона: ' + Style.RESET_ALL)
-    return new_number
+    while True:
+        new_number = input(Fore.CYAN + Style.NORMAL + 'Введите новый номер телефона: ' + Style.RESET_ALL)
+        if check.Check_telephon_number(new_number):
+            return new_number
+        else:
+            error_tel_num()
 
 def get_new_comment():
     '''Запрашивает у пользовтеля новый комментарий'''
-    new_comment = input(Fore.CYAN + Style.NORMAL + 'Введите новый комментарий: ' + Style.RESET_ALL).title()
-    return new_comment
+    while True:
+        new_comment = input(Fore.CYAN + Style.NORMAL + 'Введите новый комментарий: ' + Style.RESET_ALL).title()
+        if check.Check_comment(new_comment):
+            return new_comment
+        else:
+            error_comment()
 
 def error_name():
     '''Печатает ошибку, если имя введено неверно'''

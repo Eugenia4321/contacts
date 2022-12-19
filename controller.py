@@ -21,27 +21,33 @@ def start():
             ie.result_read()
             rd.Read_csvfile('data.csv')
         elif n == 6:
-            while True:
+            update = True
+            while update == True:
                 ie.menu_item_options()
                 option = ie.menu_item()
                 if option == 1:
-                    surname = fd.search_contact_by_surname() # возвращаем строку с искомой фамилией
+                    surname = str(fd.search_contact_by_surname()).lstrip("['") # возвращаем строку с искомой фамилией
+                    surname = surname.rstrip("']")
                     ie.result_search()
                     ie.top_line()
                     print(surname)
                     up.function_update(surname, name_data_list = 'data.csv')
                 elif option == 2:
-                    name = fd.search_contact_by_name()
+                    name = str(fd.search_contact_by_name()).lstrip("['")
+                    name = name.rstrip("']")
                     ie.result_search()
                     ie.top_line()
                     print(name)
                     up.function_update(name, name_data_list = 'data.csv')
                 elif option == 3:
-                    tel_num = fd.search_contact_by_phone_num()
+                    tel_num = str(fd.search_contact_by_phone_num()).lstrip("['")
+                    tel_num = tel_num.rstrip("']")
                     ie.result_search()
                     ie.top_line()
                     print(tel_num)
                     up.function_update(tel_num, name_data_list = 'data.csv')
+                elif option == 4: 
+                    update = False
                 else:
                     ie.error_menu_item()
         elif n == 7:
