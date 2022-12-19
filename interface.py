@@ -1,7 +1,7 @@
 from colorama import init
 init()
 from colorama import Fore, Back, Style
-
+import check
 def hello():
     '''Функция приветствия'''
     print(Fore.CYAN + Style.NORMAL + 'Вас приветствует телефонная книга' + Style.RESET_ALL)
@@ -26,9 +26,8 @@ def menu_item():
 def get_surname():
     '''Запрашивает у пользовтеля фамилию'''
     surname = ''
-    while not check.Check_name(surname):   
+    while not check.Check_name(surname): 
         surname = input(Fore.CYAN + Style.NORMAL + 'Введите фамилию: ' + Style.RESET_ALL).title()
-
     return surname
 
 def get_name():
@@ -43,6 +42,7 @@ def get_tel_num():
     '''Запрашивает у пользовтеля телефон'''
     number=''
     while not check.Check_telephon_number(number):
+
         number = input(Fore.CYAN + Style.NORMAL + 'Введите номер телефона: ' + Style.RESET_ALL)
     return number
   
