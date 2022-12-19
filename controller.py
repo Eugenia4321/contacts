@@ -83,13 +83,13 @@ while True:
             ie.menu_item_options()
             option = ie.menu_item()
             if option == 1:
-                surname = ch.Check_surname()
+                surname = ie.get_surname()
                 de.delete_contact(surname,name_data_list="data.csv")
             elif option == 2:
-                name = ch.Check_name()
+                name = ie.get_name()
                 de.delete_contact(name,name_data_list="data.csv")
             elif option == 3:
-                tel_num = ch.Check_telephon_number()
+                tel_num = ie.get_tel_num()
                 de.delete_contact(tel_num,name_data_list="data.csv")
             elif option == 4: 
                 delete= False

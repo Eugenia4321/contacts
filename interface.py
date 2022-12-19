@@ -25,29 +25,34 @@ def menu_item():
 
 def get_surname():
     '''Запрашивает у пользовтеля фамилию'''
-    surname = input(Fore.CYAN + Style.NORMAL + 'Введите фамилию: ' + Style.RESET_ALL).title()
+    surname = ''
+    while not check.Check_name(surname):   
+        surname = input(Fore.CYAN + Style.NORMAL + 'Введите фамилию: ' + Style.RESET_ALL).title()
+
     return surname
 
 def get_name():
     '''Запрашивает у пользовтеля имя'''
-    name = input(Fore.CYAN + Style.NORMAL + 'Введите имя: ' + Style.RESET_ALL).title()
+    name = ''
+    while not check.Check_name(name):
+        name = input(Fore.CYAN + Style.NORMAL + 'Введите имя: ' + Style.RESET_ALL).title()
     return name
     
 
 def get_tel_num():
     '''Запрашивает у пользовтеля телефон'''
-    number = input(Fore.CYAN + Style.NORMAL + 'Введите номер телефона: ' + Style.RESET_ALL)
+    number=''
+    while not check.Check_telephon_number(number):
+        number = input(Fore.CYAN + Style.NORMAL + 'Введите номер телефона: ' + Style.RESET_ALL)
     return number
   
 def get_comment():
     '''Запрашивает у пользовтеля комментарий'''
-    comment = input(Fore.CYAN + Style.NORMAL + 'Введите комментарий: ' + Style.RESET_ALL).title()
+    comment=''
+    while not check.Check_comment(comment):
+        comment = input(Fore.CYAN + Style.NORMAL + 'Введите комментарий: ' + Style.RESET_ALL).title()
     return comment
 
-def get_new_surname():
-    '''Запрашивает у пользовтеля новую фамилию'''
-    new_surname = input(Fore.CYAN + Style.NORMAL + 'Введите новую фамилию: ' + Style.RESET_ALL).title()
-    return new_surname
 
 def get_new_name():
     '''Запрашивает у пользовтеля новое имя'''
