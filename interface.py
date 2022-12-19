@@ -92,12 +92,7 @@ def error_menu_item():
 def error_no_contact():
     '''Печатает ошибку, если нет совпадений'''
     print(Fore.RED + Style.NORMAL + 'У вас в книге нет такого абонента' + Style.RESET_ALL)
-
-def question_to_add():
-    '''Спрашивает у пользователя хочет ли он ввести ещё один контакт'''
-    question = input(Fore.CYAN + Style.NORMAL + 'Хотите ввести еще один контакт? Y/N: ' + Style.RESET_ALL)
-    return question
-            
+          
 def create_success():
     '''Печатает об успешном создании контакта'''
     print(Fore.GREEN + Style.NORMAL + 'Контакт успешно создан.' + Style.RESET_ALL)
