@@ -59,7 +59,7 @@ def Read_csvfile_for_list(datacsv) ->list:
     return data_list
 
 
-еще одна функция для чтения и записи в список для формата txt: 
+# еще одна функция для чтения и записи в список для формата txt: 
     
 def get_lines_list_of_contacts(name_data_list : str ="data.csv") -> list:
     """чтение файла и запись в список"""

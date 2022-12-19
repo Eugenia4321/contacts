@@ -32,12 +32,13 @@ def get_name():
     '''Запрашивает у пользовтеля имя'''
     name = input(Fore.CYAN + Style.NORMAL + 'Введите имя: ' + Style.RESET_ALL).title()
     return name
+    
 
 def get_tel_num():
     '''Запрашивает у пользовтеля телефон'''
-    number = input(Fore.CYAN + Style.NORMAL + 'Введите номер телефона: ' + Style.RESET_ALL).replace(" ", "")
+    number = input(Fore.CYAN + Style.NORMAL + 'Введите номер телефона: ' + Style.RESET_ALL)
     return number
-
+  
 def get_comment():
     '''Запрашивает у пользовтеля комментарий'''
     comment = input(Fore.CYAN + Style.NORMAL + 'Введите комментарий: ' + Style.RESET_ALL).title()
@@ -55,7 +56,7 @@ def get_new_name():
 
 def get_new_tel_num():
     '''Запрашивает у пользовтеля новый телефон'''
-    new_number = input(Fore.CYAN + Style.NORMAL + 'Введите новый номер телефона: ' + Style.RESET_ALL).replace(" ", "")
+    new_number = input(Fore.CYAN + Style.NORMAL + 'Введите новый номер телефона: ' + Style.RESET_ALL)
     return new_number
 
 def get_new_comment():

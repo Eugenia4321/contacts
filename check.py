@@ -14,7 +14,7 @@ def Check_name(name: str):
 
 def Check_comment(comment: str): 
     """Проверка комментария"""
-    if not 2 <= len(comment) <= 301:
+    if 2 <= len(comment) <= 301:
         return True
     else:
         return False   
